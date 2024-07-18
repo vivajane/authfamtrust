@@ -1,5 +1,6 @@
+import Button from "../Component/Button"
 
-const Login = () => {
+const Login = ({onClickHandler}) => {
   return (
     <div className="md:px-16">
         <h1 className="text-txtblue text-center font-lato text-3xl font-bold py-4">Login</h1>
@@ -16,7 +17,9 @@ const Login = () => {
             <div className="relative py-5">
             <a className="absolute right-0 font-lato text-base font-semibold forgot text-txtblue" href="#">Forgot Password?</a>
             </div>
-            <div className="py-2"><button className="bg-bluey w-full py-2 rounded-xl" type="submit">Sign in</button></div>
+            <div onClick={onClickHandler} >
+            <Button />
+            </div>
             <p className="text-center font-lato text-base font-normal pb-3">You dont have an account? <a className="text-txtblue" href="signup">Sign up</a></p>
         </form>
       

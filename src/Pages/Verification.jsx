@@ -1,4 +1,4 @@
-import React from "react";
+
 import Button from "../Component/Button";
 
 const Verification = ({ onClickHandler }) => {

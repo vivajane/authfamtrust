@@ -1,4 +1,4 @@
-import React from 'react';
+
 // import { BiBullseye } from "react-icons/bi";
 import Button from '../Component/Button';
 

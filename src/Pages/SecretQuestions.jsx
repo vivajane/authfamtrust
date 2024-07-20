@@ -108,12 +108,12 @@ const SecretQuestions = ({ onClickHandler }) => {
 
                  <div onClick={() => ClickShow(question.id)}>
                   {
-                    show ? <SlArrowUp/> : <SlArrowDown/>
+                    show === question.id ? <SlArrowUp/> : <SlArrowDown/>
                   }
 
                  </div>
                 </div>
-                <div className="bg-white">
+                {show===question.id && <div className="bg-white">
                   {question.subquestions.map((subquestion) => (
                     <p
                       key={subquestion.id}
@@ -122,7 +122,7 @@ const SecretQuestions = ({ onClickHandler }) => {
                       {subquestion.text}
                     </p>
                   ))}
-                </div>
+                </div>}
               </div>
             </div>
           ))}

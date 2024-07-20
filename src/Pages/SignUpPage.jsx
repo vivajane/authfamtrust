@@ -33,7 +33,7 @@ const SignUpPage = () => {
 
 
       <div >
-        <img className="w-[500px] h-fit" src={login} alt="login" />
+        <img className="w-[500px] md:h-fit" src={login} alt="login" />
       </div>
     </div>
   );

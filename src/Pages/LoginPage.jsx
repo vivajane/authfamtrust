@@ -23,7 +23,7 @@ const LoginPage = () => {
       {increase === 3 && <TwoFactor onClickHandler={onClickHandler}/>}
 
       <div className="mx-auto text-center flex justify-center">
-        <img className="w-[300px] h-fit" src={login} alt="login" />
+        <img className="md:w-[300px] md:h-fit" src={login} alt="login" />
       </div>
     </div>
   );

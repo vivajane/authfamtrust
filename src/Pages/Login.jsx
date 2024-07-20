@@ -24,7 +24,7 @@ const Login = ({onClickHandler}) => {
                 <input className="w-full py-2  border-slate-700 rounded-xl border-[1px]" type="email" name="password" id="password" />
             </div>
             <div className="relative py-5 ">
-            <NavLink className="text-txtblue ml-72 " to="/recovery">Forgot Password?</NavLink>
+            <NavLink className="text-txtblue " to="/recovery">Forgot Password?</NavLink>
             </div>
             <div onClick={onClickHandler} >
             <Button>SIGN IN</Button>

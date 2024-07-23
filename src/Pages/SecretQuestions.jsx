@@ -74,11 +74,23 @@ const questions = [
 
 const SecretQuestions = ({ onClickHandler }) => {
   const [show, setShow] = useState(false);
+  const [selected, setSelected] = useState({});
   
 
   const ClickShow = (id) => {
     setShow(show === id ? false : id);
   };
+
+  const handleSelect = (questionId, subquestionText)=> {
+    setSelected({
+      ...selected,
+      [questionId]: subquestionText,
+      
+
+    })
+    setShow(null)
+
+  }
 
   
 
@@ -101,6 +113,7 @@ const SecretQuestions = ({ onClickHandler }) => {
                   <input
                     className="rounded-2xl"
                     type="text"
+                    value={selected[question.id] || null} 
                    
                     readOnly
                     placeholder="Select Your Question"
@@ -115,7 +128,7 @@ const SecretQuestions = ({ onClickHandler }) => {
                 </div>
                 {show===question.id && <div className="bg-white">
                   {question.subquestions.map((subquestion) => (
-                    <p
+                    <p onClick={() =>handleSelect(question.id, subquestion.text)}
                       key={subquestion.id}
                       className="border-b-[1px] py-2 px-1 cursor-pointer"
                     >

@@ -1,14 +1,13 @@
 import { NavLink } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "../Component/Header";
+import Hero from "../Component/Hero";
 function HomePage() {
   return (
-    <div className="bg-bluey px-24 py-4 flex justify-between">
-      <NavLink className="hover:text-white" to="login">
-        LOGIN
-      </NavLink>
-      <NavLink className="hover:text-white" to="signup">
-        SIGNUP
-      </NavLink>
+    <div className="">
+    <Hero/>
     </div>
+    
   );
 }
 
